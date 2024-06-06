@@ -2,5 +2,6 @@
     display: flex;
     justify-content: center;
     color: rgb(133,166,185);
-    
+    margin-top: 0;
+    margin-bottom: 0;
 }

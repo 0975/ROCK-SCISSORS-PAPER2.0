@@ -1,8 +1,7 @@
 .ui{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 400px;
-    height: 350px;
+    height: 400px;
     background-color: rgb(255, 255, 255);
     border-radius: 16px;
     padding-top: 30px;

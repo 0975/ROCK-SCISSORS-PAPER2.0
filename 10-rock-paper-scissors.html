@@ -5,22 +5,31 @@
     <title>
         Rock Paper Scissors
     </title>
-   <link rel="stylesheet" href="style/all.css">
-   <link rel="stylesheet" href="style/container.css">
-   <link rel="stylesheet" href="style/title.css">
-   <link rel="stylesheet" href="style/ui.css">
-   <link rel="stylesheet" href="style/visible.css">
+    <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="style/container.css">
+    <link rel="stylesheet" href="style/title.css">
+    <link rel="stylesheet" href="style/ui.css">
+    <link rel="stylesheet" href="style/visible.css">
+    <meta charset="UTF-8">
 
 
 </head>
 
 <body>
     <div class="all">
+        <div class="tip">
+            <p class="tips">电脑：</p>
+            <p class="tips">你：</p>
+        </div>
         <div class="ui">
+           
             <div class="title">
                 <h1 class="title-h1">石头！剪刀！布！</h1>
             </div>
             <div class="container">
+                <div class="computerMove-picture">
+                    <img class="js-computerMove-icon move-change" >
+                </div>
                 <div class="first-buttons">
                     <button onclick="
                 playGame('石头');  
@@ -52,7 +61,7 @@
                     " class="reset-buttoninfo">Reset Score</button>
                 </div>
 
-                
+
             </div>
 
         </div>
@@ -80,37 +89,52 @@
         }
         */
 
+
         function playGame(playmove) {
             const computerMove = pickComputerMove();
+            var image = document.querySelector('.js-computerMove-icon');
+            
             let result = '';
-
+            
             if (playmove === '石头') {
+   
                 if (computerMove === '石头') {
+                    image.src ='emoji/rock-emoji.png';
                     result = '平局';
                 } else if (computerMove === '布') {
+                    image.src ='emoji/paper-emoji.png';
                     result = '你输了';
                 } else if (computerMove === '剪刀') {
+                    image.src ='emoji/scissors-emoji.png';
                     result = '你赢了';
                 }
 
 
 
             } else if (playmove === '布') {
+               
                 if (computerMove === '石头') {
+                    image.src ='emoji/rock-emoji.png';
                     result = '你赢了';
                 } else if (computerMove === '布') {
+                    image.src ='emoji/paper-emoji.png';
                     result = '平局';
                 } else if (computerMove === '剪刀') {
+                    image.src ='emoji/scissors-emoji.png';
                     result = '你输了';
                 }
 
 
             } else if (playmove === '剪刀') {
+               
                 if (computerMove === '石头') {
+                    image.src ='emoji/rock-emoji.png';
                     result = '你输了';
                 } else if (computerMove === '布') {
+                    image.src ='emoji/paper-emoji.png';
                     result = '你赢了';
                 } else if (computerMove === '剪刀') {
+                    image.src ='emoji/scissors-emoji.png';
                     result = '平局';
                 }
 
