@@ -107,6 +107,8 @@
                 } else if (computerMove === '剪刀') {
                     image.src ='emoji/scissors-emoji.png';
                     result = '你赢了';
+                   
+                   
                 }
 
 
@@ -143,7 +145,9 @@
 
             if (result === '你赢了') {
                 score.wins += 1;
+                image.src ='emoji/5FGwn4T.gif';
             } else if (result === '你输了') {
+                image.src ='emoji/333.gif';
                 score.losses += 1;
             } else if (result === '平局') {
                 score.ties += 1;
